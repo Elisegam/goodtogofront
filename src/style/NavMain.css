@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap");
+
+.navbar {
+  font-family: "PT Sans Narrow", sans-serif;
+}
+.logo {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(47, 158, 247);
+  height: 12%;
+  width: 100%;
+  /* position: fixed; */
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+}
+
+.logo-burger {
+  width: inherit;
+}
+.logo-image {
+  display: flex;
+}
+
+.logo-image a {
+  width: 70px;
+  margin: auto;
+}
+
+.left-logo {
+  text-align: center;
+  margin: auto;
+}
+.left-logo h1 {
+  margin: auto;
+  font-size: 50px;
+}
+
+.left-logo p {
+  margin: auto;
+  font-size: 20px;
+}
+
+.icones {
+  display: flex;
+  width: 20%;
+  margin: auto 0;
+  justify-content: space-evenly;
+}
+
+.icones i {
+  width: 20px;
+}
