@@ -22,6 +22,7 @@ export default class MenuForm extends Component {
     console.log(this.state);
     this.setState({ [e.target.name]: e.target.value });
   };
+
   render() {
     return (
       <div>

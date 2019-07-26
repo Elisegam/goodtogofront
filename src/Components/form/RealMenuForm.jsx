@@ -16,7 +16,7 @@ export class RealMenuForm extends Component {
     const { title, description, image, mainDish, price, category } = this.state;
     console.log(title, description);
     axios
-      .post(process.env.REACT_APP_BACKEND_API + "/api/menu", {
+      .post(process.env.REACT_APP_BACKEND_URL + "/api/menu", {
         title,
         description,
         image,
@@ -36,7 +36,7 @@ export class RealMenuForm extends Component {
   };
   componentDidMount() {
     axios
-      .get(process.env.REACT_APP_BACKEND_API + "/api/aliments", this.state)
+      .get(process.env.REACT_APP_BACKEND_URL + "/api/aliments", this.state)
       .then(res => {
         const filtered = res.data.filter(element => {
           return element.category === "burger" || element.category === "wrap";
