@@ -3,8 +3,17 @@ import Map from "../Components/map";
 import Footer from "../Components/Footer";
 
 export default class Home extends Component {
-  handleClick = message => {
-    console.log(message);
+  state = {
+    showingInfoWindow: false,
+    selectedPlace: {},
+    activeMarker: {}
+  };
+  handleClick = (props, marker, e) => {
+    this.setState({
+      showingInfoWindow: true,
+      selectedPlace: props,
+      activeMarker: marker
+    });
   };
   render() {
     return (
@@ -33,13 +42,18 @@ export default class Home extends Component {
             <div className="sub-sub-home">
               <i className="fas fa-home" />
               <p>
-                BURGER KING LYON TAPONAS A6 Aire De, Autoroute du Soleil, 69220
-                Taponas
+                BURGER KING LYON TAPONAS A6 Aire De Taponas, Autoroute du
+                Soleil, 69220 Taponas
               </p>
             </div>
           </div>
           <div>
-            <Map handleClick={this.handleClick} />
+            <Map
+              selectedPlace={this.state.selectedPlace}
+              showingInfoWindow={this.state.showingInfoWindow}
+              activeMarker={this.state.activeMarker}
+              handleClick={this.handleClick}
+            />
           </div>
         </div>
         <Footer />

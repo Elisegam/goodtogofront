@@ -36,7 +36,7 @@ export class Payment extends Component {
 
   render() {
     return (
-      <div className="d-flex col cb-container">
+      <div className="d-flex col cb-container" style={{ margin: "auto" }}>
         <h3>Pay</h3>
         <label>Name on Card</label>
         <input type="text" />
