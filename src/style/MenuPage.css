@@ -278,8 +278,7 @@
 
 @media screen and (min-width: 1000px) {
   .big-container {
-    width: 100%;
-    margin: auto;
+    width: 80%;
   }
   /* .minirecap {
     right: 0;

@@ -94,12 +94,21 @@ export default class Menu extends Component {
               </div>
             </div>
           </div>
-          <div className="minirecap">
+          {/* <div className="minirecap">
+            <h1
+              style={{
+                textAlign: "center",
+                color: "white",
+                textShadow: "grey 2px 2px"
+              }}
+            >
+              Recap Commande
+            </h1>
             <MiniRecapMenu
               handleDelete={this.handleDelete}
               selectedItems={this.props.currentMenus}
             />
-          </div>
+          </div> */}
         </div>
       </div>
     );

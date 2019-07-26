@@ -61,7 +61,7 @@ function NavMain() {
                     to="/dashboard"
                   /> */}
                   <SignoutIcon signout={signout} />
-                  <p>Log Out</p>
+                  <p style={{ color: "red" }}>Log Out</p>
                 </React.Fragment>
               ) : (
                 <NavLink

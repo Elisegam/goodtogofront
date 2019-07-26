@@ -13,7 +13,7 @@ const MiniRecapMenu = ({ selectedItems, handleDelete }) => {
           <div key={i}>
             <DisplayPrice items={selectedItems} />
             <button onClick={e => handleDelete(item)}>
-              <i class="fas fa-minus-circle" />
+              <NavLink to="/payment">PAY NOW</NavLink>
             </button>
             <hr style={{ width: "80%" }} />
           </div>
