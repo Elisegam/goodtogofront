@@ -120,6 +120,7 @@
 .home {
   display: flex;
   width: 100%;
+  height: 110vh;
 }
 
 .sub-home {
@@ -128,24 +129,30 @@
   font-family: "PT Sans Narrow", sans-serif;
   border-radius: 5px;
   width: 50%;
-  height: 19.2em;
+  height: 110vh;
   font-size: 50px;
 }
 
 .sub-home h2 {
+  font-size: 8vh;
   margin: auto;
-
+  padding: 8%;
   text-align: center;
 }
 
 .sub-sub-home {
+  font-family: "PT Sans Narrow", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 6vh;
+  font-size: 3vh;
   padding: 4px;
   margin: auto;
-  width: 50vh;
+  width: 37vh;
+}
+.sub-sub-home i {
+  font-size: 5vh;
+  text-align: -webkit-center;
 }
 
 .minirecap {
@@ -199,14 +206,82 @@
   .asideRecap {
     display: none;
   }
+  .title {
+    margin-left: 66px;
+  }
+
+  body {
+    background-color: tomato;
+  }
+
+  .sub-home {
+    width: 100%;
+  }
+  .sub-sub-home {
+    font-size: 2vh;
+    padding: 2px;
+    margin: auto;
+    width: 17vh;
+  }
+  .sub-sub-home i {
+    font-size: 3vh;
+  }
+  .sub-home h2 {
+    font-size: 5vh;
+  }
+  .home {
+    flex-direction: column;
+  }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (max-width: 768px) {
   .menu {
     /* background-color: blue; */
     margin: auto;
   }
+
+  body {
+    background-color: purple;
+  }
+  .sub-home {
+    width: 100%;
+    height: 80vh;
+  }
+  .sub-sub-home {
+    font-size: 2vh;
+    padding: 2px;
+    margin: auto;
+    width: 17vh;
+  }
+  .sub-sub-home i {
+    font-size: 3vh;
+  }
+  .sub-home h2 {
+    font-size: 5vh;
+  }
+  .home {
+    flex-direction: column;
+  }
+  .big-container {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1100px) {
   .minirecap {
     display: none;
   }
+  /* .big-container {
+    width: 100%;
+    margin: auto;
+  } */
+}
+
+@media screen and (min-width: 1000px) {
+  .big-container {
+    width: 100%;
+    margin: auto;
+  }
+  /* .minirecap {
+    right: 0;
+  } */
 }

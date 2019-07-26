@@ -10,7 +10,6 @@
   background-color: rgb(47, 158, 247);
   height: 12%;
   width: 100%;
-  /* position: fixed; */
   z-index: 1;
   top: 0;
   overflow-x: hidden;
@@ -51,4 +50,48 @@
 
 .icones i {
   width: 20px;
+}
+
+.icones a {
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-width: 750px) {
+  .logo.logo-burger {
+    width: 3rem;
+  }
+  .left-logo h1 {
+    font-size: 30px;
+  }
+
+  .left-logo p {
+    font-size: 14px;
+  }
+  .ico p {
+    display: none;
+  }
+  .icones a {
+    margin: auto;
+    font-size: 0.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .logo.logo-burger {
+    width: 3rem;
+  }
+  .left-logo h1 {
+    font-size: 30px;
+  }
+
+  .left-logo p {
+    font-size: 14px;
+  }
+  .ico p {
+    display: none;
+  }
+  .icones a {
+    margin: auto;
+    font-size: 0.5rem;
+  }
 }
