@@ -11,7 +11,7 @@ export default class MenuForm extends Component {
   handleSubmit = e => {
     e.preventDefault();
     axios
-      .post(process.env.REACT_APP_BACKEND_API + "/api/aliments", this.state)
+      .post(process.env.REACT_APP_BACKEND_URL + "/api/aliments", this.state)
       .then(res => {
         this.setState({ title: "", image: "", price: 0 });
         console.log(res);
@@ -23,8 +23,6 @@ export default class MenuForm extends Component {
     this.setState({ [e.target.name]: e.target.value });
   };
   render() {
-    console.log(process.env.REACT_APP_BACKEND_API);
-
     return (
       <div>
         <form onChange={this.handleChange} onSubmit={this.handleSubmit}>
