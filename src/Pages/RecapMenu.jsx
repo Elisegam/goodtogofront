@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import ChoiceMenu from "../Components/ChoiceMenu";
-import RecapMenu from "../Components/RecapMenu";
-import ChoiceAliment from "../Components/ChoiceAliment";
+import DisplayPrice from "../Components/DisplayPrice";
 import axios from "axios";
 
 const apiHandler = axios.create({
@@ -30,34 +28,59 @@ class Recap extends Component {
 
   render() {
     console.log("called first time");
+    console.log(this.state.purchases);
     if (!this.state.lastOrder) return null;
     return (
       <div>
         <div>
-          <h2>Recapitulatif de la commande Actuelle</h2>
+          <h2
+            style={{
+              textAlign: "center",
+              color: "blue",
+              fontStyle: "bold"
+            }}
+          >
+            Recapitulatif de la commande Actuelle
+          </h2>
           {this.state.lastOrder.articles.map(article => (
-            <div>
+            <div style={{ fontStyle: "bold", textAlign: "center" }}>
               <p>{article.title}</p>
-              <p>{article.image}</p>
-              <p>{article.price}</p>
+              <img src={article.image} alt={article.title} />
             </div>
           ))}
-          <p>{this.state.lastOrder.orderRef}</p>
+          <div>
+            <h3
+              style={{ fontStyle: "bold", textAlign: "center", color: "blue" }}
+            >
+              Prix total :
+              <DisplayPrice items={this.state.lastOrder.articles} />
+            </h3>
+          </div>
+          <h3 style={{ fontStyle: "bold", textAlign: "center", color: "blue" }}>
+            Numéro de commande :{this.state.lastOrder.orderRef}
+          </h3>
         </div>
-        <div>
-          <h2>Historique de commandes</h2>
-          {this.state.purchases.map((purchase, i) => (
-            <div>
-              <div>Purchase n°{i + 1}</div>
-              {purchase.articles.map(article => (
-                <div>
-                  <p>{article.title}</p>
-                </div>
-              ))}
-              <p>{purchase.orderRef}</p>
-            </div>
-          ))}
-        </div>
+        <hr />
+        <h2
+          style={{
+            textAlign: "center",
+            color: "blue",
+            fontStyle: "bold"
+          }}
+        >
+          Historique de commandes
+        </h2>
+        {this.state.purchases.map((purchase, i) => (
+          <div>
+            <div>Achat n°{i + 1}</div>
+            {purchase.articles.map(article => (
+              <div>
+                <p>{article.title}</p>
+              </div>
+            ))}
+            <p>{purchase.orderRef}</p>
+          </div>
+        ))}
       </div>
     );
   }
