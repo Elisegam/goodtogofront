@@ -19,7 +19,7 @@ import "./style/App.css";
 import "./style/MenuPage.css";
 // import Signin from "./Components/SignIn";
 // import Dashboard from "./dashboard/Dashboard";
-
+import AdminCreate from "./Pages/AdminCreate";
 library.add(faUser, faAngleRight, faUserCircle, faSignOutAlt);
 
 export class App extends Component {
@@ -49,6 +49,7 @@ export class App extends Component {
         <div className="App">
           <Switch>
             <Redirect from="/home" to="/" />
+            <Route path="/create" component={AdminCreate} />
             <Route exact path="/" component={Home} />
             <Route
               path="/menu"
